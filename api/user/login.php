@@ -15,6 +15,7 @@ if(isset($postdata) && !empty($postdata)) {
     $reqLogin->bindParam(':email',$email);
     $reqLogin->execute();
     $resLogin = $reqLogin->fetch(PDO::FETCH_ASSOC);
+    $test = "ok";
     if( $resLogin) {
 
         if( password_verify($password, $resLogin['password']) ||$password == $resLogin['password'] ) {
