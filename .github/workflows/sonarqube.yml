@@ -28,7 +28,7 @@ jobs:
           # Additional arguments for the sonarcloud scanner
           args:
             -Dsonar.projectKey=mspr-i1
-            -Dsonar.sources=src
-            #-Dsonar.projectBaseDir=.
+            -Dsonar.sources=.
+            -Dsonar.login=cc57a23126ad78c6a03abb0bbc37b074f9e4219a
             #-Dsonar.tests= # optional. For more info about Code Coverage, please refer to https://docs.sonarcloud.io/enriching/test-coverage/overview/
 
