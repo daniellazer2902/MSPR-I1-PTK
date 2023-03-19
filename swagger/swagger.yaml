@@ -1,0 +1,70 @@
+openapi: 3.0.0
+info:
+  title: 'Search API'
+  version: 1.0.0
+servers:
+  - url: http://localhost/MSPR-I1-PTK/api
+    description: Current host server
+paths:
+  /products/getall.php:
+    get:
+      tags:
+        - Products
+      summary: Récupère tous les produits
+      description: Récupère tous les produits
+      parameters:
+        - name: token
+          in: query
+          description: Jeton d'authentification
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ProductRow"
+  /authentification/login.php:
+    get:
+      tags:
+        - Authentification
+      description: Vérifie le token de connexion
+      summary: Vérifie le token de connexion
+      parameters:
+        - name: token
+          in: query
+          description: Jeton d'authentification
+          required: true
+          schema:
+            type: string
+
+      responses:
+        '200':
+          description: Expected response to a valid request
+          content:
+            application/json:
+              schema:
+                type: boolean
+components:
+  schemas:
+    ProductRow:
+      type: object
+      required:
+        - id
+        - libelle
+      properties:
+        id:
+          type: string
+        libelle:
+          type: string
+        code:
+          type: string
+        url3d:
+          type: string
+        description:
+          type: string
+        stock:
+          type: number
