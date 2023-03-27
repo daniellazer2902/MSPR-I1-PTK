@@ -29,7 +29,7 @@ $payload = array(
 $token = JWT::encode($payload, $key);
 //$decoded = JWT::decode($token, $key, array('HS256'));
 
-$link = "http://localhost/MSPR-I1-PTK/src/index.php?token=$token";
+$link = "https://192.168.1.24/MSPR-I1-PTK/src/index.php?token=$token";
 echo $token . "<br>";
 echo "<a href='$link' target='_blank'>Redirection vers le lien</a>";
 

@@ -1,0 +1,6 @@
+projectKey=mspr
+serverUrl=http://ip10-0-159-4-cggr2hqab711286lbg20-9000.direct.lab-boris.fr
+serverVersion=7.6.0.21501
+dashboardUrl=http://ip10-0-159-4-cggr2hqab711286lbg20-9000.direct.lab-boris.fr/dashboard?id=mspr
+ceTaskId=AYcjnpOpWkNEiOsy-WHp
+ceTaskUrl=http://ip10-0-159-4-cggr2hqab711286lbg20-9000.direct.lab-boris.fr/api/ce/task?id=AYcjnpOpWkNEiOsy-WHp
