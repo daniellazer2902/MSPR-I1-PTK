@@ -34,6 +34,11 @@ else {
                 success: function (data) {
                     var res = JSON.parse(data);
                     console.log(res)
+                    if(res["code"] === "error") {
+                        var newDiv = $("<div>");
+                        newDiv.text(res["message"]);
+                        $("#products").append(newDiv);
+                    }
                     if(res["code"] === "ok") {
                         $.each(res["products"], function(index, value) {
                             // Créer la nouvelle div pour chaque produit
